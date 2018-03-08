@@ -1,0 +1,25 @@
+{
+  "name": "algorithm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc; concurrently \"tsc --watch\" \"NODE_ENV=dev node dist/index.js\"",
+    "mocha": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha -r ts-node/register src/test/*.ts",
+    "start": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "chai": "^4.1.2",
+    "concurrently": "^3.5.1",
+    "mocha": "^5.0.4",
+    "ts-jest": "^22.4.1",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2"
+  }
+}
