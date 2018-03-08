@@ -3,17 +3,17 @@ import LinkedList from './LinkedList';
 
 export default class StackByLL<T> implements Stack<T> {
 
-  private m_items: LinkedList<T>;
+  private m_ll: LinkedList<T>;
 
   constructor() {
-    this.m_items = new LinkedList<T>();
+    this.m_ll = new LinkedList<T>();
   }
 
   /**
    * O(1)
    */
   peek(): T {
-    return this.m_items.peekHeadItem();
+    return this.m_ll.peekHeadItem();
   }
 
   /**
@@ -21,27 +21,27 @@ export default class StackByLL<T> implements Stack<T> {
    * @param item 
    */
   push(item: T) {
-    this.m_items.addToHead(item);
+    this.m_ll.addToHead(item);
   }
 
   /**
    * O(1)
    */
   pop(): T {
-    return this.m_items.removeFromHead();
+    return this.m_ll.removeFromHead();
   }
 
   /**
    * O(1)
    */
   isEmpty(): boolean {
-    return this.m_items.isEmpty();
+    return this.m_ll.isEmpty();
   }
   
   /**
    * O(1)
    */
   size(): number {
-    return this.m_items.size();
+    return this.m_ll.size();
   }
 }

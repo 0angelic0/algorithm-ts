@@ -44,12 +44,12 @@ function testStack(stack: Stack<number>) {
 
 describe('test stack', function() {
   it('stack by array', function() {
-    let stack: StackByArray<number> = new StackByArray<number>();
+    const stack: StackByArray<number> = new StackByArray<number>();
     testStack(stack);
   });
 
-  it('stack by ll', function() {
-    let stack: StackByLL<number> = new StackByLL<number>();
+  it('stack by linked list', function() {
+    const stack: StackByLL<number> = new StackByLL<number>();
     testStack(stack);
   });
 });
