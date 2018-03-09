@@ -34,7 +34,7 @@ export default class StackByArray<T> implements Stack<T> {
    * O(1)
    */
   isEmpty(): boolean {
-    return this.m_items.length == 0;
+    return this.size() == 0;
   }
   
   /**
