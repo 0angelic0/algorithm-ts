@@ -1,5 +1,5 @@
 import Stack from './Stack';
-import LinkedList from './LinkedList';
+import LinkedList from '../ll/LinkedList';
 
 export default class StackByLL<T> implements Stack<T> {
 

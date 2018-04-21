@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { findMax, findMax2 } from '../findMax';
+import { findMax, findMax2 } from '../algo/findMax';
 
 describe('test', function() {
   it('findMax', function() {

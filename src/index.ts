@@ -1,4 +1,4 @@
-import { findMax, findMax2 } from './findMax';
+import { findMax, findMax2 } from './algo/findMax';
 
 console.log('Hello World!');
 

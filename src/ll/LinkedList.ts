@@ -1,4 +1,4 @@
-import neverHere from './neverHere';
+import neverHere from '../util/neverHere';
 
 class LLNode {
   private m_item: any;

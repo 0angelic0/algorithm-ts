@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import LinkedList from '../LinkedList';
+import LinkedList from '../ll/LinkedList';
 
 describe('test linked list', function() {
   it('work', function() {

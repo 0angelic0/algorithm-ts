@@ -1,7 +1,7 @@
 import { expect } from 'chai';
-import Stack from '../Stack';
-import StackByArray from '../StackByArray';
-import StackByLL from '../StackByLL';
+import Stack from '../stack/Stack';
+import StackByArray from '../stack/StackByArray';
+import StackByLL from '../stack/StackByLL';
 
 function testStack(stack: Stack<number>) {
   expect(stack.isEmpty()).to.be.true;

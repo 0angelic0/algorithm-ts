@@ -1,5 +1,5 @@
 import Queue from './Queue';
-import LinkedList from './LinkedList';
+import LinkedList from '../ll/LinkedList';
 
 export default class QueueByLL<T> implements Queue<T> {
 

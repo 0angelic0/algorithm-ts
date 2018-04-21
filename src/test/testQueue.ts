@@ -1,7 +1,8 @@
 import { expect } from 'chai';
-import Queue from '../Queue';
-import QueueByArray from '../QueueByArray';
-import QueueByLL from '../QueueByLL';
+import Queue from '../queue/Queue';
+import QueueByArray from '../queue/QueueByArray';
+import QueueByLL from '../queue/QueueByLL';
+import PriorityQueue from '../queue/PriorityQueue';
 
 function testQueue(queue: Queue<number>) {
   expect(queue.isEmpty()).to.be.true;
@@ -42,5 +43,32 @@ describe('queue', function() {
   it('test queue by linked list', function() {
     const queue: QueueByLL<number> = new QueueByLL<number>();
     testQueue(queue);
+  });
+
+  it('test priority queue', function() {
+    const pq: PriorityQueue = new PriorityQueue(100);
+    expect(pq.isEmpty()).to.be.true;
+    expect(pq.size()).to.be.equal(0);
+
+    pq.insert(5);
+    pq.insert(10);
+    pq.insert(3);
+    pq.insert(7);
+    pq.insert(25);
+    pq.insert(16);
+    expect(pq.popMax()).to.be.equal(25);
+    expect(pq.popMax()).to.be.equal(16);
+    expect(pq.popMax()).to.be.equal(10);
+    pq.insert(2);
+    expect(pq.popMax()).to.be.equal(7);
+    pq.insert(6);
+    pq.insert(5);
+    expect(pq.popMax()).to.be.equal(6);
+    expect(pq.popMax()).to.be.equal(5);
+    expect(pq.popMax()).to.be.equal(5);
+    expect(pq.popMax()).to.be.equal(3);
+    expect(pq.popMax()).to.be.equal(2);
+
+    expect(pq.isEmpty()).to.be.true;
   });
 });
